@@ -132,6 +132,8 @@ header.conteiner {
 .hero {
     background-color: var(--secondary-bg-color);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {   
@@ -187,6 +189,10 @@ header.conteiner {
 
 /* section */
 
+.section.advant.container {
+    padding-bottom: 46px;
+}
+
 .section-title-hidden {
     height: 0;
     opacity: 0;
@@ -224,8 +230,8 @@ header.conteiner {
     letter-spacing: 0.03em;
 }
 
-.advantages.list {
-    margin-bottom: 46px;
+.section.doing {
+    padding-top: 0;
 }
 
 .section-title.doing {
@@ -242,6 +248,7 @@ header.conteiner {
 }
 
 /*  team */
+
 .team {
     background-color: #F5F4FA;
     font-size: 16px;
