@@ -35,9 +35,10 @@ h1,h2,h3,p,ul {
 
 .container {
     width: 1200px;
-    margin: 0 15px;
-    outline: 2px solid red;
-    
+    padding: 0 15px;
+    /* outline: 2px solid red; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list {
@@ -46,15 +47,17 @@ h1,h2,h3,p,ul {
 
 
 .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    width: 145px;
+
     color: black;
     font-family: "Raleway", "Proxima Nova", sans-serif;
     font-size: 26px;
-    line-height: 1,19;
+    line-height: 1.19;
     letter-spacing: 0.03em;
-    font-weight: 700;
-    margin-right: 93px;
-    width: 145px;
-    height: 31px;       
+    font-weight: 700;      
 }
 
 .logo-part {
@@ -65,7 +68,7 @@ h1,h2,h3,p,ul {
 
 .site-nav.list,
 nav,
-.contacts.list
+.contacts.header
 {
     display: flex;
     align-items: center;
@@ -81,11 +84,10 @@ nav,
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    font-weight: 500;
-    margin-right: 50px;
+    font-weight: 500;    
 }
 
-.site-nav a:not(:last-child) {
+.site-nav-link:not(:last-child) {
     margin-right: 50px;
 }
 
@@ -100,10 +102,10 @@ nav,
 
 .contacts.list {
     margin-left: auto;
-    justify-content: flex-end;
+    justify-content: flex-end;    
 }
 
-.email {
+.contacts-link:not(:last-child) {
     margin-right: 50px;
 }
 
@@ -116,7 +118,17 @@ nav,
     color: var(--accent-color);
 }
 
+header.conteiner {
+    border: 1px solid #ECECEC;
+}
+
 /* hero */
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .hero {
     background-color: var(--secondary-bg-color);
     text-align: center;
@@ -144,14 +156,18 @@ nav,
     line-height: 1.88;
     letter-spacing: 0.06em;
     font-weight: 700;
-    width: 200px;
+    min-width: 200px;
     height: 50px;
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* button */
 .button {
     cursor: pointer;
     border-color: transparent;
+    border-radius: 4px;
+    border: none;
 }
 
 .list .button {
@@ -167,10 +183,6 @@ nav,
 .list .button:focus {
     background-color: var(--accent-color);
     color: #ffffff;
-}
-
-.hero.container {
-    margin-bottom: 94px;
 }
 
 /* section */
@@ -191,7 +203,6 @@ nav,
 
 .advantages {
     padding: 0;
-    margin-bottom: 94px;
     display: flex;
 }
 
@@ -213,12 +224,17 @@ nav,
     letter-spacing: 0.03em;
 }
 
+.advantages.list {
+    margin-bottom: 46px;
+}
+
 .section-title.doing {
     margin-bottom: 50px;
 }
 
 .doing.list {
     display: flex;
+    justify-content: space-between;
 }
 
 .doing-title:not(:last-child) {
@@ -233,29 +249,60 @@ nav,
     letter-spacing: 0.03em;
 }
 
-.team .section-title{
-    margin-top: 94px;
-    padding-top: 94px;
+.team .section-title {
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team .list {
-    margin-bottom: 94px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center
+}
+
+.persons:not(:last-child) {
+    margin-right: 30px;
+}
+
+.photo,
+.position {
+    margin-bottom: 30px;
+}
+
+.persons-name {
+    margin-bottom: 10px;
 }
 
 /* potfolio */
-/* works */
 
 h1.hidden {
+    height: 0;
     opacity: 0;
 }
 
-.button-list {
-    margin-top: 94px;
-    margin-bottom: 34px;
+/* button */
+
+.button.list {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 50px;
 }
 
+.filter:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filter .button {
+    padding: 6px 22px;
+}
+
+/* works */
+
+/* border: 1px solid #EEEEEE; */
+
 .works-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -263,14 +310,35 @@ h1.hidden {
 }
 
 .works-type {
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
 }
 
 .works.list {
-    margin-bottom: 94px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.work-link:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.work-link:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+}
+
+ .work-image img {
+     display: block;
+
+ }
+
+ .works-title-border {
+     padding: 20px 24px;
+     border-left: 1px solid #EEEEEE; border-right: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE
+ }
+
 /* footer */
 .adress {
     background-color: var(--secondary-bg-color);
@@ -286,4 +354,24 @@ h1.hidden {
 
 .transp span{
     color: rgba(255, 255, 255, 0.6);
+}
+
+.adress.container {
+    padding-top: 60px;
+}
+
+.logo.footer {
+    display: block;
+    margin-bottom: 20px;
+}
+
+footer .contacts {
+    display: inline-block;
+    width: 231px;
+    height: 81px;
+    margin-bottom: 60px;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 9px;
 }
