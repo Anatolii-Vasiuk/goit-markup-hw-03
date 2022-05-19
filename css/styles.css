@@ -76,7 +76,6 @@ nav,
 
 .site-nav.list {
     width: 294px;
-    height: 16px;
 }
 
 .site-nav a {
@@ -189,10 +188,6 @@ header.conteiner {
 
 /* section */
 
-.section.advant.container {
-    padding-bottom: 46px;
-}
-
 .section-title-hidden {
     height: 0;
     opacity: 0;
@@ -266,6 +261,12 @@ header.conteiner {
     display: flex;
     justify-content: space-between;
     text-align: center
+}
+
+.persons {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .persons:not(:last-child) {
@@ -363,12 +364,14 @@ h1.hidden {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.adress.container {
+.adress .container {
     padding-top: 60px;
 }
 
 .logo.footer {
     display: block;
+    padding: 0;
+    margin-right: 0;
     margin-bottom: 20px;
 }
 
